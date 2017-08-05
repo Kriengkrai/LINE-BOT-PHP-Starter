@@ -16,6 +16,13 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
+			$answer = $text;
+			if($text == '1'){
+				$answer = 'หนึ่ง';
+			} elseif ($text == '2') {
+				$answer = 'สอง';
+			}
+
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
