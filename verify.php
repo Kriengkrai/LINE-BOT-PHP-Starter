@@ -4,12 +4,19 @@ $access_token = 'iyx7Z0eGYPRFjBG6XHnHbnHLO4fPjAU8pFgi9ykz/HMqZJbn0zoErtfnV28qNYT
 
 $url = 'https://api.line.me/v1/oauth/verify';
 
+$proxy = 'velodrome.usefixie.com:80';
+$proxyauth = 'fixie:NKAGFbRPZHYddbI';
+
 $headers = array('Authorization: Bearer ' . $access_token);
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+
 $result = curl_exec($ch);
 curl_close($ch);
 
