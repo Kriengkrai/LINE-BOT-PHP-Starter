@@ -21,6 +21,12 @@ if (!is_null($events['events'])) {
 				$answer = 'หนึ่ง';
 			} elseif ($text == '2') {
 				$answer = 'สอง';
+			} elseif ($text == 'วาวา') {
+				$answer = 'วาวา น่ารักที่สุดเลย';
+			} elseif ($text == 'ทดสอบ') {
+				$answer = 'ทดสอบอะไรเหรอ !';
+			} elseif ($text == 'สวัสดี') {
+				$answer = 'สวัสดีครับ ยินดีที่ได้รู้จักครับ';
 			}
 
 			// Build message to reply back
